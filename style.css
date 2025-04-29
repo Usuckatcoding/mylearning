@@ -1,0 +1,90 @@
+html,body{
+    margin:0;
+    height:100%;
+    width:100%;
+    background-color:rgb(76, 71, 63) ;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+#menu{
+    height: fit-content;
+    width: 25%;
+    padding: 2px;
+    margin: 2px;
+
+}
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 50%;
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 100px;
+}
+#bar{
+    height: 80%;
+    width: 90%;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+}
+.signup-login{
+    display: flex;
+    justify-content: end;
+    height: fit-content;
+    width: 25%;
+    padding: 2px;
+    margin: 2px;
+}
+.signup-login input{
+    font-size: 120%;
+    border: none;
+    margin: 10%;
+    border-radius: 10px;
+    background-color: 	#D2B48C;
+}
+#menu i {
+    margin-left:10%;
+    color: white;
+    font-size: 2em;
+}
+.Carpentery-content{
+    margin-top: 60px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    
+    height: 100%;
+    width: 100%;
+}
+.news
+{
+    color: black;
+    text-align: center;
+    padding: 10%;
+    margin: 5%;
+    background-color: white;
+    height: 15rem;
+    width:15rem;
+    border-radius: 10%;
+    overflow: auto;
+}
+::-webkit-scrollbar {
+
+    width: 0;
+  }
+  .news::-webkit-scrollbar-track{
+    border-radius: 50px;
+}
