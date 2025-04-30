@@ -1,16 +1,20 @@
 html,body{
     margin:0;
-    height:100%;
-    width:100%;
+    height:100vh;
+    width:100vw;
     background-color:rgb(76, 71, 63) ;
 }
 
 header{
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 95%;
+    margin: 2.5%;
     height: 50px;
+    border-radius: 10px;
+    background-color: aliceblue;
 }
 #menu{
     height: fit-content;
@@ -46,6 +50,7 @@ header{
     width: 25%;
     padding: 2px;
     margin: 2px;
+    
 }
 .signup-login input{
     font-size: 120%;
@@ -53,32 +58,39 @@ header{
     margin: 10%;
     border-radius: 10px;
     background-color: 	#D2B48C;
+    border: 1px solid black;
 }
 #menu i {
     margin-left:10%;
-    color: white;
+    color: royalblue;
     font-size: 2em;
 }
 .Carpentery-content{
-    margin-top: 60px;
-    display: grid;
-    justify-items: center;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
-    
-    height: 100%;
-    width: 100%;
+    height:fit-content;
+    width: 95%;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin-top: 60px;
+    margin: 2.5%;
 }
 .news
 {
     color: black;
-    text-align: center;
-    padding: 10%;
-    margin: 5%;
+    text-align:left;
+    padding: .5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 4%;
     background-color: white;
-    height: 15rem;
-    width:15rem;
-    border-radius: 10%;
+    height: 10rem;
+    width: 90%;
+    border-radius: 10px;
     overflow: auto;
 }
 ::-webkit-scrollbar {
