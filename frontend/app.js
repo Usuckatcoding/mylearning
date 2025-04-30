@@ -8,11 +8,12 @@ fetch(url)
    }
    )
    .then(information => {
+      let a=0;
       let info=information.articles;
       let existingele=document.getElementById("work0");
       let maincontain=document.getElementsByClassName('Carpentery-content');
       let maincontainer=maincontain[0];
-      for(let a=0;a<info.length;a++){
+      while(a<info.length){
       let newdiv=new Array(a);
       newdiv[a]=existingele.cloneNode(true);
       maincontainer.appendChild(newdiv[a]);
@@ -29,7 +30,9 @@ fetch(url)
 `;
       container.innerHTML = articleHTML;
       console.log(article);
+      a++;
       }
+   
       console.log(information);
       
    })
