@@ -10,7 +10,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: auto;
     margin: 2.5%;
     height: 50px;
     border-radius: 10px;
@@ -57,7 +57,7 @@ header{
     border: none;
     margin: 10%;
     border-radius: 10px;
-    background-color: 	#D2B48C;
+    background-color:royalblue;
     border: 1px solid black;
 }
 #menu i {
