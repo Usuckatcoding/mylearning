@@ -3,6 +3,13 @@ html,body{
     height:100vh;
     width:100vw;
     background-color:rgb(76, 71, 63) ;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 header{
@@ -52,7 +59,7 @@ header{
     margin: 2px;
     
 }
-.signup-login input{
+.signup-login button{
     font-size: 120%;
     border: none;
     margin: 10%;

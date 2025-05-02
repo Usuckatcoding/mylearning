@@ -32,7 +32,14 @@ fetch(url)
       console.log(article);
       a++;
       }
-   
       console.log(information);
-      
    })
+   let signup=document.getElementById('Signup');
+      signup.addEventListener('click',()=>{
+      window.location.href="/backend/views/signup.ejs"
+   })
+   let login=document.getElementById('login');
+   login.addEventListener('click',()=>{
+   window.location.href="/backend/views/login.ejs"
+})
+   
