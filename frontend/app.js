@@ -1,5 +1,5 @@
 
-let apiKey ="2511f9f6117042b6aea772090c4ebf77";
+let apiKey =process.env.API_KEY||"2511f9f6117042b6aea772090c4ebf77";
 let url = `https://newsapi.org/v2/everything?q=Apple&from=2025-04-28&sortBy=popularity&apiKey=${apiKey}`;
 fetch(url)
    .then(response => {
