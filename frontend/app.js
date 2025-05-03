@@ -1,5 +1,5 @@
 
-let apiKey = "2511f9f6117042b6aea772090c4ebf77";
+let apiKey ="2511f9f6117042b6aea772090c4ebf77";
 let url = `https://newsapi.org/v2/everything?q=Apple&from=2025-04-28&sortBy=popularity&apiKey=${apiKey}`;
 fetch(url)
    .then(response => {
@@ -24,22 +24,12 @@ fetch(url)
       let container = document.getElementById(IId);
       console.log(container);
       const articleHTML = `
-  <h2>${information.articles[a].title}</h2>
-  <p>${information.articles[a].description}</p>
-  <a href="${information.articles[a].url}" target="_blank">Read more</a>
-`;
+      <h2>${information.articles[a].title}</h2>
+      <p>${information.articles[a].description}</p>
+      <a href="${information.articles[a].url}" target="_blank">Read more</a>`;
       container.innerHTML = articleHTML;
       console.log(article);
       a++;
       }
       console.log(information);
    })
-   let signup=document.getElementById('Signup');
-      signup.addEventListener('click',()=>{
-      window.location.href="/backend/views/signup.ejs"
-   })
-   let login=document.getElementById('login');
-   login.addEventListener('click',()=>{
-   window.location.href="/backend/views/login.ejs"
-})
-   

@@ -17,9 +17,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:25rem;
-    width:30%;
+    height:60vh;
+    width:50vh;
     background-color: white;
+    margin: 20px;
     border-radius: 2rem;
 }
 
@@ -34,7 +35,7 @@ input{
 }
 #submit{
     height: 1.5rem;
-    width: 10rem;
+    width:50%;
     background-color: #34a853;
     color: #e8e8e8;
     border: none;

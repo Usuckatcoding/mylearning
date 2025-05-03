@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="/signupstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +13,13 @@
 </head>
 
 <body>
-    <form action="/register/registered" method="post" class="Infopage">
+    <form action="/register/signup" method="post" class="Infopage">
         <h2 style="padding-bottom: 1rem;">Create Account</h2>
         <input type="text" id="Full-Name" placeholder="Enter your name">
         <input type="email" id="email" placeholder="Enter Your Email">
         <input type="password" id="Password" placeholder="Create password" autocomplete="new-password">
         <input type="password" id="Confirm-Password" placeholder="Confirm password" autocomplete="new-password">
-        <button id="submit" name="registered"type="submit" >Create Account</button>
+        <button id="submit" name="registered" type="submit"  value="Create-account">Create Account</button>
         <p>Already have an Account?<a href="http://localhost:3000/register/login" id="login" style="text-decoration: none;">log in</a></p>
     </form>
 </body>

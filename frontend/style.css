@@ -35,7 +35,7 @@ header{
     justify-content: center;
     align-items: center;
     height: 70%;
-    width: 50%;
+    width: 50vw;
     padding: 2px;
     margin: 2px;
     text-align: center;
@@ -52,17 +52,18 @@ header{
 }
 .signup-login{
     display: flex;
+    flex: 1 1 0%;
     justify-content: end;
     height: fit-content;
-    width: 25%;
-    padding: 2px;
-    margin: 2px;
-    
+    font-size: .5rem;
+    /* padding: 2px; */
+    margin-right: 10px;
 }
 .signup-login button{
-    font-size: 120%;
+    font-size: 1rem;
     border: none;
-    margin: 10%;
+    margin: .5em;
+    width: min-content;
     border-radius: 10px;
     background-color:royalblue;
     border: 1px solid black;
@@ -95,10 +96,12 @@ header{
     margin-top: 10px;
     margin-left: 4%;
     background-color: white;
-    height: 10rem;
+    height: fit-content;
     width: 90%;
     border-radius: 10px;
+    font-size:3vh;
     overflow: auto;
+
 }
 ::-webkit-scrollbar {
 

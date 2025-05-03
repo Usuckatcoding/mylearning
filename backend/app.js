@@ -19,16 +19,17 @@ app.use(express.json());
         }
        
     })
-let i=new Array(3);
-app.post('/register/registered',(req,res)=>{
-    res.send('hii there');
-    
-})
 app.get('/register/login',(req,res)=>{
     res.render('login')
 })
 app.get('/register/signup',(req,res)=>{
     res.render('signup');
 })
-// app.listen(port,()=>{console.log(`the port is on ${port}`)});
+app.post('/register/signup',(req,res)=>{
+    const home=req.body.registered;
+    console.log(home);
+    if(home==='Create-account'){
+        res.render('home')
+    }
+})
 module.exports=app;
