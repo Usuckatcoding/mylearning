@@ -21,7 +21,7 @@ body{
     width:50vh;
     background-color: white;
     margin: 20px;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 input{
@@ -29,7 +29,7 @@ input{
     margin-bottom: 1rem;
     width: 80%;
     padding-left: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: 1px solid black;
     font-weight: 100;
 }

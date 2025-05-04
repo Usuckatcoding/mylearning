@@ -1,5 +1,6 @@
 html,body{
     margin:0;
+    padding-top: 1px;
     height:100vh;
     width:100vw;
     background-color:rgb(76, 71, 63) ;
@@ -13,19 +14,23 @@ html,body{
 }
 
 header{
-    
+    position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: auto;
-    margin: 2.5%;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
     height: 50px;
     border-radius: 10px;
+    font-size: small;
     background-color: aliceblue;
+    z-index: 1;
 }
 #menu{
     height: fit-content;
-    width: 25%;
+    width: 10%;
     padding: 2px;
     margin: 2px;
 
@@ -52,15 +57,12 @@ header{
 }
 .signup-login{
     display: flex;
-    flex: 1 1 0%;
     justify-content: end;
     height: fit-content;
-    font-size: .5rem;
-    /* padding: 2px; */
     margin-right: 10px;
 }
 .signup-login button{
-    font-size: 1rem;
+    font-size: .75rem;
     border: none;
     margin: .5em;
     width: min-content;
@@ -70,38 +72,69 @@ header{
 }
 #menu i {
     margin-left:10%;
+    /* width: 20%; */
     color: royalblue;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .Carpentery-content{
-    /* position: relative; */
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5%;
     height:fit-content;
     width: 95%;
     border-radius: 10px;
     background-color: aliceblue;
-    margin-top: 60px;
     margin: 2.5%;
 }
 .news
 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
     color: black;
     text-align:left;
     padding: .5rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 4%;
     background-color: white;
     height: fit-content;
     width: 90%;
     border-radius: 10px;
-    font-size:3vh;
+    font-size:2vh;
     overflow: auto;
+    margin: 4% 0%;
 
+}
+.side-menu{
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    top: 1px;
+    left: 2vw;
+    padding: 3rem;
+    background-color: aqua;
+    display: none;
+    border-radius: 10px;
+
+}
+.side-menu div{
+
+    width: auto;
+    height: 20%;
+}
+.side-menu a{
+    display:block;
+    height: 2rem;
+}
+#menucheck:checked~.side-menu{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+#menucheck:checked~#label{
+    /* display:flex; */
 }
 ::-webkit-scrollbar {
 
