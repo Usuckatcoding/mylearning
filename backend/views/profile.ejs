@@ -20,10 +20,43 @@
                 <h3>Your User name:Gautam</h3>
                 <button id="edit">Edit</button>
             </div>
+            <form action="/" id="edit-inputs">
+            <input type="text"  id="reset-username" placeholder="Enter your username">
+            <input type="password" id="reset-password" placeholder="Enter your Password">
+            <button type="submit" id="reset-user-submit">Submit</button>
+            </form>
+            <script>
+                let pass=document.getElementById('edit-inputs');
+                pass.style.display='none';
+               document.getElementById('edit').addEventListener('click',(a)=>{
+                a.preventDefault();
+                pass.style.display=pass.style.display==='none'?'flex':'none';
+               });
+               document.getElementById('reset-user-submit').addEventListener('click',()=>{
+                pass.style.display='none';
+               });
+            </script>
             <div class="change-password">
                 <h3>Change your Password</h3>
                 <button id="change">Change Password</button>
             </div>
+            <form action="/" id="edit-pass">
+                <input type="text"  id="old-password" placeholder="Enter your old-password">
+                <input type="password" id="new-password" placeholder="Enter new-password ">
+                <input type="password" id="old-password" placeholder="Enter your old-password">
+                <button type="submit" id="reset-pass-submit">Submit</button>
+            </form>
+            <script>
+                let display=document.getElementById('edit-pass');
+                display.style.display='none';
+               document.getElementById('change').addEventListener('click',(e)=>{
+                e.preventDefault();
+                display.style.display=display.style.display==='none'?'flex':'none';
+               });
+               document.getElementById('reset-pass-submit').addEventListener('click',()=>{
+                display.style.display='none';
+               });
+            </script>
         </div>
     </body>
 </html>

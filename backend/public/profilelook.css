@@ -53,6 +53,7 @@ button{
     height:2rem;
     border:none;
     outline: none;
+    cursor: pointer;
 }
 button:hover{
     background-color:rgb(16, 79, 188);
@@ -60,4 +61,38 @@ button:hover{
 #edit{
     height:1.5rem;
     width:3rem;
+}
+#edit-inputs{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: .5rem;
+    margin: .5rem 0;
+}
+#edit-inputs input{
+    width: 60vw;
+    height: 1.5rem;
+    border-radius: inherit;
+    border: 1px solid black;
+}
+#edit-pass{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: .5rem;
+    margin: .5rem 0;
+}
+#edit-pass input{
+    width: 60vw;
+    height: 1.5rem;
+    border-radius: inherit;
+    border: 1px solid black;
 }
