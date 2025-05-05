@@ -17,18 +17,17 @@
     <header class="Navigation-bar">
         <div id="menu">
             <input type="checkbox" id="menucheck"  style="display: none;">
-            <label for="menucheck" id="label"><i class="fa-solid fa-bars" ></i></label>
-            <div class="side-menu">
-                <div class="side-close"><label for="menucheck"><i class="fa-solid fa-xmark"></i></label></i></div>
-                <div><a href="#" id="profile">Profile</a></div>
-                <div><a href="#" id="special">Todays special</a></div>
-                <div><a href="#" id="logout">Logout</a></div>
-            </div>
+            <label for="menucheck" id="label"><i id="icon" class="fa-solid fa-bars" ></i></label>
+            <form action="/Profile" method="post" class="side-menu">
+                <div class="side-close"><label for="menucheck"><i id="icon" class="fa-solid fa-xmark"></i></label></i></div>
+                <button type="submit" name="User" value="PROFILE" id="profile">Profile</button>
+                <button type="submit" name="for-news" value= "SPECIAL" id="special">Todays special</button>
+                <button type="submit" name="for-logout"value="LOGOUT" id="logout">Logout</button>
+            </form>
         </div>
         <div class="searchbar">
-            <i class="fa-solid fa-magnifying-glass" style="color: royalblue;"></i>
+            <i id="search-icon" class="fa-solid fa-magnifying-glass" ></i>
             <input type="search" id="bar" placeholder="Search your Carpenter">
-
         </div>
         <form action="/register" method="post" class="signup-login">
             <button type="submit"  name="action"id="Signup" value="Signup">SignUp</button>

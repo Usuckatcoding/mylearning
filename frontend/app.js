@@ -33,3 +33,6 @@ fetch(url)
       }
       console.log(information);
    })
+   document.getElementById('search-icon').addEventListener('click',()=>{
+      document.getElementById('bar').focus();
+   })

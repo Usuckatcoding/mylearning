@@ -1,16 +1,18 @@
+*{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
 html,body{
     margin:0;
     padding-top: 1px;
     height:100vh;
     width:100vw;
-    background-color:rgb(76, 71, 63) ;
+    background-color:rgb(53, 138, 241) ;
     align-items: center;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
 }
 
 header{
@@ -48,6 +50,10 @@ header{
     border: 2px solid black;
     border-radius: 100px;
 }
+.searchbar i{
+    color: royalblue;
+    cursor: pointer;
+}
 #bar{
     height: 80%;
     width: 90%;
@@ -62,19 +68,31 @@ header{
     margin-right: 10px;
 }
 .signup-login button{
-    font-size: .75rem;
+    font-size:120%;
+    color:aliceblue ;
+    font-weight:100;
     border: none;
     margin: .5em;
     width: min-content;
     border-radius: 10px;
     background-color:royalblue;
-    border: 1px solid black;
+    cursor: pointer;
+}
+#Signup:hover{
+    background-color: rgb(16, 79, 188);
+}
+#login:hover{
+    background-color:  rgb(16, 79, 188);
 }
 #menu i {
     margin-left:10%;
-    /* width: 20%; */
     color: royalblue;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    cursor: pointer;
+}
+#icon:hover{
+    color: #0b3d91;
+    /* opacity: .75; */
 }
 .Carpentery-content{
     display: flex;
@@ -108,36 +126,37 @@ header{
 .side-menu{
     position: fixed;
     height: 100vh;
-    width: 30vw;
+    max-width: 30vw;
     top: 1px;
     left: 2vw;
     padding: 3rem;
-    background-color: aqua;
+    background-color: #E6E6FA;
     display: none;
     border-radius: 10px;
 
 }
-.side-menu div{
-
-    width: auto;
-    height: 20%;
+.side-menu button{
+    color: #E6E6FA ;
+    width: 25vw;
+    height: 6vh;
+    margin-top: 10vh;
+    background-color: royalblue;
+    border-radius: 5px;
+    border:none;
+    outline: none;
 }
 .side-menu a{
     display:block;
     height: 2rem;
 }
+
 #menucheck:checked~.side-menu{
 
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: center; */
-}
-#menucheck:checked~#label{
-    /* display:flex; */
 }
 ::-webkit-scrollbar {
-
     width: 0;
   }
   .news::-webkit-scrollbar-track{

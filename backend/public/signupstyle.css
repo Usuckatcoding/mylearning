@@ -1,15 +1,17 @@
-body{
-    height:100vh;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*{
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
+}
+body{
+    height:100vh;
+    background-color: rgb(156, 204, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Infopage{
@@ -22,6 +24,7 @@ body{
     background-color: white;
     margin: 20px;
     border-radius: 1rem;
+    box-shadow: 2px 0px 4px 2px white;
 }
 
 input{
@@ -30,6 +33,7 @@ input{
     width: 80%;
     padding-left: 10px;
     font-size: 1rem;
+    border-radius: 5px;
     border: 1px solid black;
     font-weight: 100;
 }
@@ -39,5 +43,6 @@ input{
     background-color: #34a853;
     color: #e8e8e8;
     border: none;
-    border-radius:5px;
+    border-radius:8px;
+    cursor: pointer;
 }
