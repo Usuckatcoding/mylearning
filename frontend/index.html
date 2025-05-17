@@ -18,12 +18,22 @@
         <div id="menu">
             <input type="checkbox" id="menucheck"  style="display: none;">
             <label for="menucheck" id="label"><i id="icon" class="fa-solid fa-bars" ></i></label>
-            <form action="/Profile" method="post" class="side-menu">
-                <div class="side-close"><label for="menucheck"><i id="icon" class="fa-solid fa-xmark"></i></label></i></div>
-                <button type="submit" name="User" value="PROFILE" id="profile">Profile</button>
-                <button type="submit" name="for-news" value= "SPECIAL" id="special">Todays special</button>
-                <button type="submit" name="for-logout"value="LOGOUT" id="logout">Logout</button>
-            </form>
+                
+                <div class="side-menu">
+                <div class="side-close">
+                    <label for="menucheck"><i id="icon" class="fa-solid fa-xmark"></i></label></i>
+                </div>
+                <h2 id="impressive"> Every hot news is just a click away,Sign-Up now</h2>
+                <form action="/register/signup" method="get" id="side-signUP" >
+                    <button type="submit" name="User" value="PROFILE" id="ragister">Sign-Up</button>
+                </form>
+                <form action="/special" method="get" > 
+                    <button type="submit" name="for-news" value= "SPECIAL" id="special">Today's special</button>
+                </form>
+                <button type="menu" name="for-logout"value="catag" id="Catagories">
+                    Catagory
+                </button>
+            </div>
         </div>
         <div class="searchbar">
             <i id="search-icon" class="fa-solid fa-magnifying-glass" ></i>

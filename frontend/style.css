@@ -148,6 +148,21 @@ header{
     border:none;
     outline: none;
 }
+#impressive{
+    text-align: center;
+}
+#Catagories{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0% 20%; */
+}
+#Catagories p{
+    margin-left: 2rem;
+}
+#Catagories i{
+    font-size: 1rem;
+}
 .side-menu a{
     display:block;
     height: 2rem;

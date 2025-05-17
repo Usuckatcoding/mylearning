@@ -31,11 +31,4 @@ app.post('/register/signup',(req,res)=>{
         res.render('home')
     }
 })
-app.post('/Profile',(req,res)=>{
-    let action=req.body.User;
-    console.log(action);
-    if(action==='PROFILE'){
-            res.render("profile");
-    }
-})
 module.exports=app;
