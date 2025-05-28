@@ -13,14 +13,34 @@
 </head>
 
 <body>
-    <form action="/register/signup" method="post" class="Infopage">
-        <h2 style="padding-bottom: 1rem;">Create Account</h2>
-        <input type="text" id="Full-Name" placeholder="Enter your name" class="user-info">
-        <input type="email" id="email" placeholder="Enter Your Email">
-        <input type="password" id="Password" placeholder="Create password" autocomplete="new-password">
-        <input type="password" id="Confirm-Password" placeholder="Confirm password" autocomplete="new-password">
-        <button id="submit" name="registered" type="submit"  value="Create-account">Create Account</button>
-        <p>Already have an Account?<a href="http://localhost:3000/register/login" id="login" style="text-decoration: none;">log in</a></p>
+    <form action="/home" method="post" id="Infopage">
+
+        <div style="display: flex; justify-content: center;"><h2 style="padding-bottom: 1rem;">Create Account</h2></div>
+        <input type="text" id="userName" name="username"  placeholder="Enter your name" class="user-info">
+        <input type="email" id="email" name="Email" placeholder="Enter Your Email">
+        <input type="password" id="Password" name="password" placeholder="Create password" autocomplete="new-password">
+        <input type="password" id="ConfirmPassword" name="checkpassword" placeholder="Confirm password" autocomplete="new-password">
+        <button type="submit" name="submitted" value='Submit' id="registered" >Create Account</button>
+        <p style="display: flex; justify-content: center;">Already have an Account?<a href="/login" id="login" style="text-decoration: none;">log in</a></p>
     </form>
+<script>
+    document.getElementById('Infopage').addEventListener('submit',function(e){
+        let username=document.getElementById('userName').value.trim();
+        let email=document.getElementById('email').value.trim();
+        let password=document.getElementById('Password').value.trim();
+        let checkpass=document.getElementById('ConfirmPassword').value.trim();
+        if(!username||!email||!password||!checkpass){
+        e.preventDefault();
+            alert('PLease fill the required information');
+        }
+        else if(password!==checkpass){
+        e.preventDefault();
+            alert('passwords does not match');
+        }
+        else{
+            alert('Account created');
+        }
+    })
+</script>
 </body>
 </html>

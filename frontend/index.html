@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Own Carpenter</title>
@@ -10,46 +11,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="Navigation-bar">
         <div id="menu">
-            <input type="checkbox" id="menucheck"  style="display: none;">
-            <label for="menucheck" id="label"><i id="icon" class="fa-solid fa-bars" ></i></label>
-                
-                <div class="side-menu">
+            <input type="checkbox" id="menucheck" style="display: none;">
+            <label for="menucheck" id="label" style="margin: 0;"><i  class="fa-solid fa-bars"></i></label>
+            <div class="side-menu">
                 <div class="side-close">
-                    <label for="menucheck"><i id="icon" class="fa-solid fa-xmark"></i></label></i>
+                    <label for="menucheck"><i id='icon' class="fa-solid fa-arrow-left"></i></label></i>
                 </div>
                 <h2 id="impressive"> Every hot news is just a click away,Sign-Up now</h2>
-                <form action="/register/signup" method="get" id="side-signUP" >
+                <form action="/signup" method="get" id="side-signUP">
                     <button type="submit" name="User" value="PROFILE" id="ragister">Sign-Up</button>
                 </form>
-                <form action="/special" method="get" > 
-                    <button type="submit" name="for-news" value= "SPECIAL" id="special">Today's special</button>
+                <form action="/special" method="get">
+                    <button type="submit" name="for-news" value="SPECIAL" id="special">Today's special</button>
                 </form>
-                <button type="menu" name="for-logout"value="catag" id="Catagories">
+                <button type="menu" name="for-logout" value="catag" id="Catagories">
                     Catagory
                 </button>
             </div>
         </div>
         <div class="searchbar">
-            <i id="search-icon" class="fa-solid fa-magnifying-glass" ></i>
+            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
             <input type="search" id="bar" placeholder="Search your Carpenter">
         </div>
-        <form action="/register" method="post" class="signup-login">
-            <button type="submit"  name="action"id="Signup" value="Signup">SignUp</button>
-            <button type="submit" name="action" id="login" value="Login" >Login</button>
-        </form>
+        <div class="signup-login">
+            <form action="/signup" method="post" >
+                <button type="submit" name="action" id="Signup" value="Signup">SignUp</button>
+            </form>
+            <form action="/login" method="post" >
+                <button type="submit" name="action" id="login" value="Login">Login</button>
+            </form>
+        </div>
+
     </header>
     <main class="Carpentery-content">
-        <div  class="news"id="work0">
-           
+        <div class="news" id="work0">
         </div>
     </main>
     </main>
     <script src="app.js"></script>
 </body>
+
 </html>

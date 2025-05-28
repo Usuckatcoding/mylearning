@@ -11,11 +11,12 @@ button{
 }
 html,body{
     margin:0;
-    padding-top: 1px;
     height:100vh;
     width:100vw;
-    background-color:rgb(53, 138, 241) ;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    overscroll-behavior: none;
 }
 
 header{
@@ -23,22 +24,18 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-bottom: 2.5%;
+    width: 100%;
     height: 50px;
-    border-radius: 10px;
     font-size: small;
-    background-color: aliceblue;
+    background-color: #ff9e00;
+    padding-top: 5px;
+    padding-bottom: 5px;
     z-index: 1;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0,0.5);
 }
 #menu{
     height: fit-content;
     width: 10%;
-    padding: 2px;
-    margin: 2px;
-
 }
 .searchbar{
     display: flex;
@@ -49,9 +46,12 @@ header{
     padding: 2px;
     margin: 2px;
     text-align: center;
-    background-color: white;
+    background-color:#eaecef;
     border: 2px solid black;
     border-radius: 100px;
+}
+.searchbar input{
+    background-color: #eaecef;
 }
 .searchbar i{
     color: royalblue;
@@ -68,34 +68,48 @@ header{
     display: flex;
     justify-content: end;
     height: fit-content;
-    margin-right: 10px;
+    margin-right:2.5%;
 }
-.signup-login button{
-    font-size:120%;
+#Signup{
+    font-size:1.1rem;
     color:aliceblue ;
-    font-weight:100;
+    font-weight:400;
     border: none;
-    margin: .5em;
     width: min-content;
-    border-radius: 10px;
-    background-color:royalblue;
+    border-radius: 6px;
+    background-color:	#005AED;
+    margin-right:5px ;
     cursor: pointer;
+    
+}
+#login{
+    font-size:1.1rem;
+    color:aliceblue ;
+    font-weight:400;
+    border: none;
+    width: min-content;
+    border-radius: 6px;
+    background-color:	 #005AED;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 #Signup:hover{
-    background-color: rgb(16, 79, 188);
+    background-color: rgb(12, 63, 150);
 }
 #login:hover{
-    background-color:  rgb(16, 79, 188);
+    background-color:  rgb(13, 63, 148);
 }
 #menu i {
     margin-left:10%;
-    color: royalblue;
+    color: #0061FF;
     font-size: 1.75em;
     cursor: pointer;
 }
+.side-close i{
+    color: #ED9300;
+}
 #icon:hover{
     color: #0b3d91;
-    /* opacity: .75; */
 }
 .Carpentery-content{
     display: flex;
@@ -103,10 +117,9 @@ header{
     align-items: center;
     flex-direction: column;
     height:fit-content;
-    width: 95%;
-    border-radius: 10px;
-    background-color: aliceblue;
-    margin: 2.5%;
+    width: 100%;
+    background-color:#ff9e00;
+    margin-top: 3.5rem;
 }
 .news
 {
@@ -117,25 +130,23 @@ header{
     color: black;
     text-align:left;
     padding: .5rem;
-    background-color: white;
+    background-color: #eaecef;
     height: fit-content;
     width: 90%;
     border-radius: 10px;
     font-size:2vh;
     overflow: auto;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
     margin: 4% 0%;
 
 }
 .side-menu{
     position: fixed;
     height: 100vh;
-    max-width: 30vw;
-    top: 1px;
-    left: 2vw;
-    padding: 3rem;
-    background-color: #E6E6FA;
+    width: 50vw;
+    top: 2rem;
+    background-color:#005AED;
     display: none;
-    border-radius: 10px;
 
 }
 .side-menu button{
@@ -143,7 +154,7 @@ header{
     width: 25vw;
     height: 6vh;
     margin-top: 10vh;
-    background-color: royalblue;
+    background-color: #ED9300;
     border-radius: 5px;
     border:none;
     outline: none;
@@ -155,7 +166,6 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* padding: 0% 20%; */
 }
 #Catagories p{
     margin-left: 2rem;
