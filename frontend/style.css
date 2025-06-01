@@ -238,7 +238,7 @@ header{
         width: 30vw;
     }
 }
-@media(max-width:350px){
+@media(max-width:400px){
     .signup-login{
         display: none;
     }
