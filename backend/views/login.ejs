@@ -14,12 +14,12 @@
 
 <body>
     <form action="/home" method="post" id="Infopage">
-        <div style="display: flex; justify-content: center;"><h2 style="padding-bottom: 1rem;">Welcome Back 👋</h2></div>
+        <div style="display: flex; justify-content: center; color: rgb(50,50,50);" ><h2 style="padding-bottom: 1rem;">Welcome Back 👋</h2></div>
         <input type="email" id="email" name="Email" placeholder="Enter Your Email">
         <input type="password"  name="password" id="Password" placeholder="Enter your password">
         <div style="display: flex; justify-content: flex-end;"><a href="#" id="password-reset" style="text-decoration: none; margin-bottom: 10px;">Forgot password?</a></div>
         <button id="registered" name="login" value='logged' type="submit" >Log in</button>
-        <p style="display: flex; justify-content: center;">New to the site?<a href="/signup" id="login" style="text-decoration: none;">Sign up</a></p>
+        <p style="display: flex; justify-content: center; color: rgb(50,50,50);">New to the site?<a href="/signup" id="login" style="text-decoration: none;">Sign up</a></p>
     </form>
     <script>
     document.getElementById('Infopage').addEventListener('submit',function(e){

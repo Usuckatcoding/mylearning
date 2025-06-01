@@ -23,8 +23,19 @@
             <input type="checkbox" id="menucheck" style="display: none;">
             <label for="menucheck" id="label" style="margin: 0;"><i class="fa-solid fa-bars"></i></label>
             <ol class="side-menu" style="list-style-type: none;">
-                <li><button class="btn" onclick="special()" id="special">Today's special</button></li>
-                <li><button class="btn" onclick="catagory()" id="Catagories" style="display: flex; justify-content: space-between;">Catagory<i class="bi bi-chevron-down fs-6" style="color: #212529;"></i></button></li>
+                <li><button class="btn" onclick="location.href='#'" id="special">Today's special</button></li>
+                <li style="display:flex; flex-direction:column">
+                    <input type="checkbox"  id="catagori" name="catagori" style="display: none;">
+                    <label for="catagori" class="btn" id="Catagories">
+                    Catagory<i class="bi bi-chevron-down fs-6" style="color: #212529;"></i>
+                    </label>
+                    <div>
+                         <div><a class="btn">Sports</a></div>
+                         <div><a class="btn">Politics</a></div>
+                         <div><a class="btn">Science</a></div>
+                         <div><a class="btn">more...</a></div>
+                    </div>
+                </li>
                 <li><button class="btn" onclick="location.href='/signup'" id="ragister">Sign-Up</button></li>
                 <li><button class="btn" onclick="location.href='/login'" id="sidelog">Login</button></li>
             </ol>

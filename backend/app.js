@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mysql = require('mysql2');
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    database: 'newsdata',
-    password: '@Shizuka123'
-})
+// const mysql = require('mysql2');
+// let connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     database: 'newsdata',
+//     password: '@Shizuka123'
+// })
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,51 +20,51 @@ app.post('/login', (req, res) => {
 app.post('/signup', (req, res) => {
     res.render('signup');
 })
-app.post('/home', (req, res) => {
-    let signup = req.body.submitted;
-    if (signup === 'Submit') {
-        const username1 = req.body.username;
-        const email = req.body.Email;
-        const password = req.body.password;
-        const checkpass = req.body.checkpassword;
-        let userid = 1;
-        let users = [[userid, username1, email, password]];
-        connection.query('insert into users values ?', [users], (err, result) => {
-            if (err) throw err
-            console.log(result);
-            if (!err) {
-                res.render('home');
-            }
-        })
-    }
-    else {
-        const email = req.body.Email;
-        const password = req.body.password;
-        const sql=`select email,pasword from users where email='${email}'`
-        connection.query(sql,(err,result)=>{
-            if(err) throw err
-            console.log(result);
-            if(!result[0]){
-                // alert("There is no account");
-                console.log('There is no account');
-                res.redirect('/login');
-            }
-            else if(!result[0].email){
-                // alert('password or email is wrong');
-                console.log('user does not exist');
-                res.redirect('/login');
-            }
-            else if(result[0].pasword!= password){
-                console.log('password is wrong');
-                res.redirect('/login');
-            }
-            else if(result[0].email===email && result[0].pasword===password){
-                res.render('home');
-            }
-        })
-    }
+// app.post('/home', (req, res) => {
+//     let signup = req.body.submitted;
+//     if (signup === 'Submit') {
+//         const username1 = req.body.username;
+//         const email = req.body.Email;
+//         const password = req.body.password;
+//         const checkpass = req.body.checkpassword;
+//         let userid = 1;
+//         let users = [[userid, username1, email, password]];
+//         connection.query('insert into users values ?', [users], (err, result) => {
+//             if (err) throw err
+//             console.log(result);
+//             if (!err) {
+//                 res.render('home');
+//             }
+//         })
+//     }
+//     else {
+//         const email = req.body.Email;
+//         const password = req.body.password;
+//         const sql=`select email,pasword from users where email='${email}'`
+//         connection.query(sql,(err,result)=>{
+//             if(err) throw err
+//             console.log(result);
+//             if(!result[0]){
+//                 // alert("There is no account");
+//                 console.log('There is no account');
+//                 res.redirect('/login');
+//             }
+//             else if(!result[0].email){
+//                 // alert('password or email is wrong');
+//                 console.log('user does not exist');
+//                 res.redirect('/login');
+//             }
+//             else if(result[0].pasword!= password){
+//                 console.log('password is wrong');
+//                 res.redirect('/login');
+//             }
+//             else if(result[0].email===email && result[0].pasword===password){
+//                 res.render('home');
+//             }
+//         })
+//     }
 
-})
+// })
 app.get('/login', (req, res) => {
     res.render('login')
 })
