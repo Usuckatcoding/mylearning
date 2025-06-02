@@ -150,7 +150,7 @@ header{
 }
 .side-menu button{
     margin-top: 1rem;
-    background-color: #eaecef;
+    /* background-color: #eaecef; */
     width: 100%;
     text-align: left;    
 }
@@ -167,7 +167,6 @@ header{
 
     display: flex; 
     justify-content: space-between;
-    background-color: #eaecef;
     margin-top: 1rem;
 }
 #Catagories ~div{
@@ -178,11 +177,13 @@ header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 #Catagories ~div a{
+    font-size: large;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     border-radius: 0;
-    padding-left:1.5rem ;
-    padding-top: 1rem;
+    border: none;
+    padding-left: 1.5rem;
 }
 
 #catagori:checked ~label{
