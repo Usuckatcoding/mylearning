@@ -1,270 +1,280 @@
-*{
+/* Reset / Base Styles */
+* {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+    font-variation-settings: "wdth" 100;
 }
-button{
-    cursor:pointer;
-}
-li{
-    width: 100%;
-}
-html,body{
-    margin:0;
-    height:fit-content;
-    /* height: 100vh; */
-    width:100vw;
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     overscroll-behavior: none;
 }
+li {
+    width: 100%;
+}
+button {
+    cursor: pointer;
+}
 
-header{
+/* Typography */
+.news h2 {
+    color: #222222;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.news p {
+    font-size: 1rem;
+    color: #555555;
+}
+@media(max-width: 400px) {
+    .news p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Layout & Main Content */
+.Carpentery-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    background-color: #eaecef90;
+    margin-top: 60px;
+}
+
+.news {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 90%;
+    height: fit-content;
+    color: black;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-size: 2vh;
+    overflow: auto;
+    box-shadow: 0 0 5px 0 rgba(110, 110, 110);
+    margin-top: 4%;
+}
+
+/* Header & Navigation */
+header {
     position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 5px 0;
+    background-color: #f9f9f9;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 60px;
     font-size: small;
-    background-color: 	#f9f9f9;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
     z-index: 1;
-    box-shadow: 0 0 1px 0px rgba(0, 0, 0,0.5);
 }
-#menu{
+#menu {
     display: flex;
     justify-content: center;
     height: fit-content;
     width: 10%;
 }
+#menu i {
+    margin-left: 20%;
+    font-size: 1.7em;
+    color: royalblue;
+    cursor: pointer;
+}
+#icon:hover {
+    color: #0b3d91;
+}
 
-#bar{
+/* Signup/Login */
+.signup-login {
+    display: flex;
+    justify-content: end;
+    height: fit-content;
+    margin-right: 2.5%;
+}
+#Signup, #login {
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+    color: aliceblue;
+    font-weight: 400;
+    border: none;
+    width: min-content;
+    border-radius: 6px;
+    background-color: royalblue;
+    cursor: pointer;
+}
+#Signup {
+    margin-right: 5px;
+}
+#Signup:hover {
+    background-color: rgb(12, 63, 150);
+}
+#login:hover {
+    background-color: rgb(13, 63, 148);
+}
+#bar {
     height: 80%;
     width: 90%;
     border: none;
     outline: none;
     margin: 0 10px;
 }
-.signup-login{
-    display: flex;
-    justify-content: end;
-    height: fit-content;
-    margin-right:2.5%;
-}
-#Signup{
-    font-size:clamp(0.85rem,2.5vw,1.1rem);
-    color:aliceblue ;
-    font-weight:400;
-    border: none;
-    width: min-content;
-    border-radius: 6px;
-    background-color:	royalblue;
-    margin-right:5px ;
-    cursor: pointer;
-    
-}
-#login{
-    font-size:clamp(0.85rem,2.5vw,1.1rem);
-    color:aliceblue ;
-    font-weight:400;
-    border: none;
-    width: min-content;
-    border-radius: 6px;
-    background-color:	 royalblue;
-    cursor: pointer;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
-}
-#Signup:hover{
-    background-color: rgb(12, 63, 150);
-}
-#login:hover{
-    background-color:  rgb(13, 63, 148);
-}
-#menu i {
-    margin-left:20%;
-    color: royalblue;
-    font-size:1.7em;
-    cursor: pointer;
-}
-.side-close i{
-    color: #ED9300;
-}
-#icon:hover{
-    color: #0b3d91;
-}
-.Carpentery-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height:90%;
-    width: 100%;
-    background-color:	#eaecef90;
-    margin-top: 3.5rem;
-}
 
-.news
-{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    color: black;
-    text-align:left;
-    padding: .5rem;
-    background-color: #f9f9f9;
-    height: fit-content;
-    width: 90%;
-    border-radius: 10px;
-    font-size:2vh;
-    overflow: auto;
-    box-shadow: 0 0 5px 0 rgba(110, 110, 110);
-    margin-top: 4%;
-
-}
-.news h2{
-    color: #222222;
-    font-size:clamp(1rem,2vw,1.5rem);
-}
-.news p{
-    font-size:1rem ;
-    color: #555555;
-}
-.side-menu{
-    padding:10px;
+/* Sidebar Menu */
+.side-menu {
     position: fixed;
-    height: 100vh;
-    width: 50vw;
-    left: 0;
     top: 60px;
-    background-color:#f9f9f9;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: #f9f9f9;
+    padding: 10px;
+    list-style: none;
     z-index: 1;
     display: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.side-menu button{
+.side-menu button {
     margin-top: 1rem;
-    /* background-color: #eaecef; */
     width: 100%;
-    text-align: left;    
-}
-.side-menu a{
     text-align: left;
-    display:block;
+}
+.side-menu a {
+    text-align: left;
+    display: block;
     height: 2rem;
 }
-#menucheck:checked~.side-menu{
+
+#menucheck:checked ~ .side-menu {
     display: flex;
     flex-direction: column;
 }
-#Catagories{
 
-    display: flex; 
+/* Category Dropdown */
+#Catagories {
+    display: flex;
     justify-content: space-between;
     margin-top: 1rem;
 }
-#Catagories ~div{
+#Catagories ~ div {
     display: none;
     background-color: #eaecef;
     border-left: 1px solid rgba(0, 0, 0, 0.2);
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-#Catagories ~div a{
+#Catagories ~ div a {
     font-size: large;
     margin-top: 1rem;
     display: flex;
     align-items: center;
     border-radius: 0;
-    border: none;
     padding-left: 1.5rem;
+    border: none;
 }
 
-#catagori:checked ~label{
+#catagori:checked ~ label {
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border: 1px solid rgba(0, 0, 0, 0.2);
 }
-#catagori:checked ~ div{
+#catagori:checked ~ div {
     display: block;
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
-#catagori:checked ~label > i{
-    animation: rotate .3s ease forwards;
+#catagori:checked ~ label > i {
+    animation: rotate 0.3s ease forwards;
 }
-@keyframes rotate {
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(180deg);
-    }
-}
-.loading{
+
+/* Loading Skeletons */
+.loading {
     margin: 1rem auto;
     height: 25vh;
     width: 90%;
-    box-shadow: 0 0 2px 0 rgba(137, 137, 137,0.5);
+    box-shadow: 0 0 2px 0 rgba(137, 137, 137, 0.5);
     border-radius: 10px;
-    background:linear-gradient(to right,#66666620, #f9f9f9,#66666620) ;
+    background: linear-gradient(to right, #66666620, #f9f9f9, #66666620);
     background-size: 300% 100%;
     animation: isloaded 5s infinite linear;
 }
-@keyframes isloaded{
-    0%{
+
+/* Animations */
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+@keyframes isloaded {
+    0% {
         background-position: 0 50%;
     }
-    50%{
+    50% {
         background-position: -100% 50%;
     }
-    100%{
+    100% {
         background-position: -150% 50%;
     }
 }
+
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 0;
-  }
-  .news::-webkit-scrollbar-track{
+}
+.news::-webkit-scrollbar-track {
     border-radius: 50px;
 }
-@media(min-width:546px){
-    .side-menu{
+
+/* Responsive Design */
+@media (min-width: 546px) {
+    .side-menu {
         width: 30vw;
     }
 }
-@media(max-width:400px){
-    .signup-login{
+@media (max-width: 400px) {
+    .signup-login {
         display: none;
     }
-    #menu{
+    #menu {
         margin-left: 10px;
     }
-    .searchbar{
+    .searchbar {
         margin-right: 10px;
     }
-    header{
-        justify-content: center;  
+    header {
+        justify-content: center;
     }
-    #label{
+    #label {
         position: fixed;
         top: 5px;
         left: 8px;
         transform: translateY(50%);
     }
-    .side-menu{
+    .side-menu {
         width: 70vw;
         top: 60px;
         left: 0px;
     }
-    .news p{
-    font-size:.75rem ;
-    color: #555555;
 }
+@media (orientation: landscape) {
+    .side-menu {
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        scroll-behavior: auto;
+        scrollbar-width: none;
+    }
 }

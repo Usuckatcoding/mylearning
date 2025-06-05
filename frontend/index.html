@@ -21,23 +21,26 @@
     <header class="Navigation-bar">
         <div id="menu">
             <input type="checkbox" id="menucheck" style="display: none;">
-            <label for="menucheck" id="label" style="margin: 0;"><i class="fa-solid fa-bars"></i></label>
+            <label for="menucheck" id="label"><i class="fa-solid fa-bars"></i></label>
             <ol class="side-menu" style="list-style-type: none;">
-                <li><button class="btn btn-primary" onclick="location.href='#'" id="special">Today's special</button></li>
+                <li><button class="btn btn-primary" onclick="location.href='#'" id="special">Today's special</button>
+                </li>
                 <li style="display:flex; flex-direction:column">
-                    <input type="checkbox"  id="catagori" name="catagori" style="display: none;">
+                    <input type="checkbox" id="catagori" name="catagori" style="display: none;">
                     <label for="catagori" class="btn btn-primary" id="Catagories">
-                    Catagory<i class="bi bi-chevron-down fs-6" style="color: #212529;"></i>
+                        Catagory<i class="bi bi-chevron-down fs-6" style="color: #212529;"></i>
                     </label>
                     <div>
-                         <div><a class="btn btn-lg">Sports</a></div>
-                         <div><a class="btn btn-lg">Politics</a></div>
-                         <div><a class="btn btn-lg">Science</a></div>
-                         <div><a class="btn btn-lg">more...</a></div>
+                        <div><a class="btn btn-lg">Sports</a></div>
+                        <div><a class="btn btn-lg">Politics</a></div>
+                        <div><a class="btn btn-lg">Science</a></div>
+                        <div><a class="btn btn-lg">more...</a></div>
                     </div>
                 </li>
-                <li><button class="btn btn-primary" onclick="location.href='/signup'" id="ragister">Sign-Up</button></li>
-                <li><button class="btn btn-primary" onclick="location.href='/login'" id="sidelog">Login</button></li>
+                <li><button class="btn btn-primary" onclick="location.href='/signup'" id="ragister">Sign-Up</button>
+                </li>
+                <li><button class="btn btn-primary" style="margin-bottom: 1rem;" onclick="location.href='/login'"
+                        id="sidelog">Login</button></li>
             </ol>
         </div>
         <div class="logo">
@@ -67,23 +70,30 @@
 
     </header>
     <main class="Carpentery-content">
-        <!-- <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div> -->
-        
         <div class="news" id="work0" style="display: none;">
         </div>
         <div id="lodincontainer" style="position: inherit; height: 88.8vh; width: 100vw; background-color: #f9f9f9;">
-           <div class="loading" id="loadin">
+            <div class="loading" id="loadin">
+            </div>
+            <div class="loading" id="loadin1">
+            </div>
+            <div class="loading" id="loadin2">
+            </div>
         </div>
-        <div class="loading" id="loadin1"> 
+        <div id="newsnotloaded" class="container" style="display: none;height: 100vh;">
+            <i class="bi bi-cloud-slash mt-lg-5" style="font-size:10rem;display:flex; justify-content: center;"></i>
+            <p class="container text-center mt-3">Unfortunately, the news couldn't be loaded due to browser restrictions.</p>
+            <p class="container text-center">This issue is caused by CORS regulations from NewsAPI.org.</p>
+            
+            <div class="text-center mt-5"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank"
+                class="btn btn-outline-primary">
+                Learn more about CORS
+            </a>
+            </div>
         </div>
-        <div class="loading" id="loadin2">
-        </div>
-        </div>
-    </main>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
