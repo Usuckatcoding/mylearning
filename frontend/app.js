@@ -1,8 +1,8 @@
 const date = new Date();
 date.setDate(date.getDate() - 1);
 const formattedDate = date.toISOString().split('T')[0];
-let apiKey ="2511f9f6117042b6aea772090c4ebf77";
-let url = `https://newsapi.org/v2/everything?q=us&from=${formattedDate}&sortBy=popularity&apiKey=${apiKey}`;
+let url = `https://mylearning-p4fu.onrender.com/news`;
+// let url1='http://localhost:3000/news';
    fetch(url)
    .then(response => {
       console.log(response);
@@ -10,6 +10,7 @@ let url = `https://newsapi.org/v2/everything?q=us&from=${formattedDate}&sortBy=p
    }
    )
    .then(information => {
+      console.log(information);
       document.getElementById('lodincontainer').style.display='none';
       document.getElementById('work0').style.display='flex';
       let a=0;
@@ -35,7 +36,6 @@ let url = `https://newsapi.org/v2/everything?q=us&from=${formattedDate}&sortBy=p
       console.log(article);
       a++;
       }
-      console.log(information);
    })
    .catch(error => {
       console.error('Error fetching data:', error);
