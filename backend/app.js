@@ -28,23 +28,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 let data = [];
 let fdata = [];
-let response;
+// let response;
  async function news(){
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.API_KEY||"2511f9f6117042b6aea772090c4ebf77";
     const date = new Date();
     let cachedNews = [];
     date.setDate(date.getDate() - 1);
     const formattedDate = date.toISOString().split('T')[0];
     let url = `https://newsapi.org/v2/everything?q=us&from=${formattedDate}&sortBy=popularity&apiKey=${apiKey}`;
-     response = await fetch(url);
-     data = await response.json();
-    //  console.log(data);
-     fdata = data.articles;
-     console.log(fdata);
-
-
+    try {
+        const response = await fetch(url);
+        const result = await response.json();
+        data = result; // store the full object
+        console.log(data);
+    } catch (error) {
+        console.error("Error fetching news:", error);
+    }
 }
-
+news();
 app.get('/news',(req,res)=>{
     res.json(data);
 })

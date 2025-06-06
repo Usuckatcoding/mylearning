@@ -1,9 +1,9 @@
 const date = new Date();
 date.setDate(date.getDate() - 1);
 const formattedDate = date.toISOString().split('T')[0];
-let url = `https://mylearning-p4fu.onrender.com/news`;
-// let url1='http://localhost:3000/news';
-   fetch(url)
+// let url = `https://mylearning-p4fu.onrender.com/news`;
+let url1='http://localhost:3000/news';
+   fetch(url1)
    .then(response => {
       console.log(response);
       return response.json();
