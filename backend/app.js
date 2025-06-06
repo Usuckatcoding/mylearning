@@ -40,7 +40,6 @@ let fdata = [];
         const response = await fetch(url);
         const result = await response.json();
         data = result; // store the full object
-        console.log(data);
     } catch (error) {
         console.error("Error fetching news:", error);
     }
